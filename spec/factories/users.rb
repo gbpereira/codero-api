@@ -7,5 +7,13 @@ FactoryGirl.define do
     sequence(:email) { |n| "email#{n}@example.com" }
     sequence(:phone) { |n| "#{n}" }
     sequence(:nickname) { |n| "Nickname #{n}" }
+
+    trait :creator do
+      sequence(:name) { |n| "Creator #{n}" }
+    end
+
+    trait :recipient do
+      sequence(:name) { |n| "Recipient #{n}" }
+    end
   end
 end
